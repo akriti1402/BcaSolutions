@@ -1,0 +1,112 @@
+/*-------------------------------------------------------
+10. About css
+---------------------------------------------------------*/
+
+.vector-dozer {
+	img {
+		@include pos-ab;
+		&.dozer-1 {
+			bottom: 5rem;
+			right: 5rem;
+			opacity: .2;
+		}
+		&.dozer-2 {
+			bottom: 15rem;
+			left: 0;
+		}
+	}
+}
+
+.about-left {
+    padding-right: 10rem;
+}
+
+.about-left-pic {
+	@include pos-rel;
+	img {
+		border-radius: 2rem;
+		&.about-pic-1 {
+			z-index: -2;
+		}
+		&.about-pic-2 {
+			position: absolute;
+			z-index: 1;
+			bottom: -150px;
+			right: -80px;
+		}
+	}
+}
+
+.about-right {
+	.about-title {
+		font-weight: 700;
+	}
+	.about-txt {
+		margin-bottom: 3rem;
+		line-height: 3.3rem;
+	}	
+}
+
+
+.about-title {
+	font-size: 3.2rem;
+	line-height: 5.2rem;
+	text-transform: capitalize;
+	margin-bottom: 2rem;
+	span {
+		color: var(--clr-def);
+	}
+}
+
+.about-list {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	li {
+		display: grid;
+		align-items: center;
+		grid-gap: 1.5rem;
+		grid-template-columns: 5rem 1fr;
+		font-size: 16px;
+		font-weight: 500;
+		color: var(--clr-heading);
+		i {
+			height: 4rem;
+			width: 4rem;
+			line-height: 4rem;
+			color: var(--clr-def);
+			font-size: 1.8rem;
+			border: 1px solid #eee;
+			-webkit-border-radius: 50%;
+			border-radius: 50%;
+			text-align: center;
+		}
+	}
+}
+
+//About 2
+
+.about-2-left-txt {
+    padding-right: 17rem;
+	.hero-title {
+		margin-top: -1rem;
+	}
+	p {
+		line-height: 3.3rem;
+	}
+}
+
+.about-list.colmn-2 {
+	display: inherit;
+	li {
+		margin-bottom: 1.5rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+.about-left-2-pic {
+    margin-top: -177px;
+}

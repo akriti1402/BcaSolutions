@@ -1,0 +1,159 @@
+/*-------------------------------------------------------
+10. Feature css 
+---------------------------------------------------------*/
+
+.feature-wpr.grid-3 {
+    grid-column-gap: 5rem;
+}
+
+.feature-box {
+	position: relative;
+	z-index: 1;
+	.feature-shadow {
+		background: var(--clr-bg);
+		position: absolute;
+		left: 3rem;
+		bottom: -15px;
+		width: calc(100% - 57px);
+		height: 100%;
+		box-shadow: 3px 3px 13px 0px rgba(0, 0, 0, 0.1);
+		z-index: -1;
+	}
+	.feature-box-content {
+		background-color: var(--clr-white);
+		padding: 3rem 3rem 6rem 6rem;
+		box-shadow: 3px 3px 13px 0px rgba(0, 0, 0, 0.1);
+		position: relative;
+		z-index: 1;
+		.feature-helmet {
+			@include pos-ab;
+			top: -20px;
+			right: -20px;
+		}
+		&::after,
+		&::before {
+			@include pos-ab;
+			-webkit-transition: all .5s ease;
+			transition: all .5s ease;
+		}
+		&::before {
+			border: 1px solid var(--clr-def);
+			border-top: none;
+			border-right: none;
+			height: 55%;
+			width: 55%;
+			bottom: 3rem;
+			left: 3rem;
+		}
+		&::after {
+			border: 5px solid var(--clr-def);
+			border-top: none;
+			border-right: none;
+			height: 40%;
+			width: 40%;
+			bottom: 2rem;
+			left: 2rem;
+		}
+		h4 {
+			font-size: 2.2rem;
+			line-height: 3.4rem;
+			margin-bottom: 2rem;
+			padding-bottom: 2rem;
+			font-weight:  700;
+			@include pos-rel;
+			&::before {
+				@include pos-ab;
+				width: 3rem;
+				height: 3px;
+				bottom: 0;
+				left: 0;
+				border-radius: 2rem;
+				background-color: var(--clr-def);
+			}
+		}
+		p {
+			font-size: 2rem;
+			line-height: 38px;
+		}
+	}
+	&:hover {
+		.feature-box-content {
+				&::before {
+				height: 20%;
+				width: 20%;
+			}
+		}
+	}
+}
+
+//feature 2
+
+.feature-2-area {
+	background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.feature-2-box {
+	display: grid;
+	grid-template-columns: 9rem 1fr;
+	grid-gap: 2rem;
+	align-items: center;
+	background-color: var(--clr-heading);
+	.feature-2-icon {
+		i {
+			height: 9rem;
+			width: 9rem;
+			line-height: 9rem;
+			text-align: center;
+			background-color: var(--clr-def);
+			color: var(--clr-white);
+			display: block;
+			font-size: 5rem;
+		}
+	}
+	span {
+		font-size: 16px;
+		font-weight: 500;
+		color: var(--clr-white);
+		letter-spacing: .567;
+	}
+}
+
+.feature-2-wpr.grid-3 {
+    margin-top: -50px;
+    position: relative;
+    z-index: 9;
+}
+
+.year-text.grid-2 {
+    align-items: center;
+	margin-top: 6.5rem;
+	.hero-title {
+		line-height: 5.5rem;
+	}
+}
+
+.year {
+	text-align: center;
+	h3 {
+		font-weight: 600;
+		color: var(--clr-heading);
+		margin-top: -3rem;
+		font-size: 3rem;
+		text-transform: uppercase;
+	}
+}
+
+.year-outline {
+	background-image: url(img/about/2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+	-webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+	.year-value {
+		font-size: 280px;
+		font-weight: 900;
+		font-family: var(--font-1);
+		margin-bottom: 0;
+	}
+}

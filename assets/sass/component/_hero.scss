@@ -1,0 +1,239 @@
+
+/*-------------------------------------------------------
+08. Hero css 
+---------------------------------------------------------*/
+
+@mixin hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	position: relative;
+	z-index: 1;
+}
+
+.hero-section {
+	background-position: left top!important;
+	background-size: cover!important;
+	background-repeat: no-repeat!important;
+	&::before {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		content: '';
+		top: 0;
+		left: 0;
+		z-index: -1;
+		background-color: var(--clr-overlay);
+	}
+}
+
+//Hero 1 #00008B
+
+.hero-single {
+    @include hero;
+	.hero-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+        .hero-title {
+			margin-bottom: 3rem;
+			line-height: 1.2;
+			font-size: 6rem;
+			text-transform: uppercase;
+			font-weight: 900;
+			color: var(--clr-white);
+        }
+		.hero-sub-title {
+			margin-bottom: 2rem;
+		}
+		
+		p {
+			font-size: 2rem;
+			line-height: 38px;
+			margin-bottom: 4rem;
+			color: var(--clr-white);
+		}
+		
+        .hero-btn {
+            gap: 2rem;
+            line-height: 1;
+            display: flex;
+            margin-top: 1rem;
+        }
+    }
+}
+
+.hero-title {
+	font-size: 40px;
+	line-height: 5rem;
+	margin-bottom: 3rem;
+	font-weight: 900;
+}
+
+.hero-sub-title {
+	font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.hero-shape {
+	img {
+		position: absolute;
+		z-index: -1;
+		&.hero-1 {
+			left: 0;
+			bottom: -2px;
+		}
+		&.hero-2 {
+			left: 5rem;
+			top: 10rem;
+		}
+		&.hero-3 {
+			bottom: 0;
+			left: 0;
+			z-index: -2;
+		}
+		&.hero-4 {
+			top: 26%;
+			right: 10%;
+		}
+		&.hero-5 {
+			right: 50%;
+			bottom: 20rem;
+		}
+		&.hero-6 {
+			right: 0;
+			top: 0;
+		}
+	}
+}
+
+.hdr-pic {
+    display: flex;
+    justify-content: center;
+}
+
+
+//Hero Slider
+
+.bo {
+	height: 20rem;
+	width: 20rem;
+	clip-path: path("M 102.905 18.268 c 28.412 -37.588 97.208 3.111 97.208 58.371 A 100.057 100.057 0 0 1 0 76.639 C 0 21.379 74.493 55.857 102.905 18.268 Z");
+	background-color: var(--clr-def);
+	display: inline-block;
+}
+
+
+//Owl Carousel 
+
+.hero-sldr.owl-theme .owl-nav {
+    margin-top: 0px;
+}
+
+.hero-sldr.owl-theme .owl-nav [class*=owl-] {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+	background: var(--clr-def);
+	color: var(--clr-white);
+    display: inline-block;
+    cursor: pointer;
+	height: 5rem;
+	width: 5rem;
+	line-height: 5rem;
+	text-align: center;
+	border-radius: 50%;
+	box-shadow: 0 0 0px 10px rgba(239, 115, 1,.8);
+}
+
+.hero-sldr.owl-theme .owl-nav [class*=owl-]:hover {
+    background: var(--clr-white);
+	color:var(--clr-def);
+}
+
+.hero-sldr.owl-theme .owl-nav .owl-prev {
+	left: 5rem;
+}
+
+.hero-sldr.owl-theme .owl-nav .owl-next {
+	right: 5rem;
+}
+
+.hero-sldr.owl-theme .owl-nav .owl-prev,
+.hero-sldr.owl-theme .owl-nav .owl-next {
+	position: absolute;
+	top: 50%;
+	transform: translate(0,-50%);
+}
+
+.hero-sldr {
+	.owl-item {
+		.hero-single {
+			.hero-content {
+				h2 {
+					opacity: 0;
+					visibility: hidden;
+					transition: all 500ms ease;
+					transform: translateY(-20px);
+				}
+				p {
+					opacity: 0;
+					visibility: hidden;
+					transition: all 500ms ease;
+					transform: translateX(-50px);
+				}
+				.hero-btn {
+					transform: scaleY(0);
+					transition: all 500ms ease;
+					transition-delay: 2000ms;
+					transform-origin: bottom;
+				}
+			}
+			.hdr-pic {
+				opacity: 0;
+				visibility: hidden;
+				transition: all 500ms ease;
+				transform: translateY(50px);
+			}
+		}
+	}
+}
+
+.hero-sldr {
+	.owl-item.active {
+		.hero-single {
+			.hero-content {
+				h2 {
+					opacity: 1;
+					visibility: visible;
+					transition-delay: 800ms;
+					transform: translateY(0px);
+				}
+				p {
+					opacity: 1;
+					visibility: visible;
+					transition-delay: 1600ms;
+					transform: translateX(0px);
+				}
+				.hero-btn {
+    				transform: scale(1);
+				}
+			}
+			.hdr-pic {
+				opacity: 1;
+				visibility: visible;
+				transition-delay: 1200ms;
+				transform: translateY(0px);
+			}
+		}
+	}
+}
+
+
+
+
+
+

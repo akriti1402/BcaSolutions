@@ -1,0 +1,98 @@
+
+/*-------------------------------------------------------
+13.service css  
+---------------------------------------------------------*/
+
+.serv-overlay {
+	@include pic-cover;
+	&::before {
+		@include pos-ab;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: var(--clr-overlay);
+	}
+}
+
+.service-shape {
+	img {
+		position: absolute;
+		z-index: -1;
+		bottom: 0;
+		left: 0;
+	}
+}
+
+.service-box {
+	padding: 20rem 2rem 4rem 2rem;
+	box-shadow: var(--box-shadow-1);
+	border-radius: var(--rad-1);
+	background-color: var(--clr-white);
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	.service-pic {
+		.service-1 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 2rem 2rem 20rem 10rem;
+			z-index: -1;
+		}
+	}
+	.service-icon {
+		margin-bottom: 3rem;
+		i {
+			height: 10rem;
+			width: 10rem;
+			font-size: 4rem;
+			line-height: 10rem;
+			text-align: center;
+			background-color: var(--clr-white);
+			box-shadow: var(--box-shadow-1);
+			-webkit-border-radius: 50%;
+			border-radius: 50%;
+			display: inline-block;
+			color: var(--clr-def);
+			position: relative;
+			z-index: 1;
+			-webkit-transition: all .5s ease;
+			transition: all .5s ease;
+			&::after {
+				position: absolute;
+				content: '';
+				width: 1.8rem;
+				height: 1.8rem;
+				background-color: var(--clr-def);
+				bottom: -6px;
+				left: 50%;
+				-webkit-transform: translate(-50%, 0);
+				-webkit-transform: translate(-50%, 0);
+				border-radius: 50%;
+			}
+		}
+	}
+	.service-desc {
+		h4 {
+			font-size: 2rem;
+			text-transform: capitalize;
+			font-weight: 600;
+			font-family: var(--font-1);
+			margin-bottom: 2rem;
+		}
+	}
+	&:hover {
+		.service-icon {
+			i {
+				color: var(--clr-def-3);
+				&::after {
+					background-color: var(--clr-1);
+				}
+			}
+		}
+	}
+}
+
+
+

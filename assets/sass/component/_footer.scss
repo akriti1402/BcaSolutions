@@ -1,0 +1,181 @@
+/*-------------------------------------------------------
+21. Footer css 
+---------------------------------------------------------*/
+
+footer {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	background-color: #002143;
+}
+
+.footer-shp {
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	bottom: 0;
+}
+
+//Copyright
+
+.copyright {
+	border-top: 1px solid #333232;
+	padding: 3rem 0;
+	.copyright-content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+    p {
+		color: var(--clr-white);
+		a {
+			color: var(--clr-def);
+			font-weight: 700;
+		}
+    }
+}
+
+//Footer widget wapper
+
+.footer-widget-title {
+	position: relative;
+	padding-bottom: 3rem;
+	margin-bottom: 4rem;
+	z-index: 1;
+	color: var(--clr-white);
+	&::before {
+		position: absolute;
+		content: '';
+		z-index: -1;
+		width: 6rem;
+		height: 4px;
+		bottom: 0;
+		left: 0;
+		background-color: var(--clr-white);
+	}
+}
+
+//Footer About
+
+.about-us {
+	padding-right: 5rem;
+	.footer-logo {
+		margin-bottom: 4rem;
+	}
+	p {
+		color: var(--clr-white);
+		line-height: 3.2rem;
+		margin-bottom: 4rem;
+	}
+}
+
+.footer-sub {
+	form {
+		position: relative;
+		z-index: 1;
+		.input-style-1 {
+			width: 100%;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+		}
+		.input-btn {
+			background-color: var(--clr-def);
+			color: var(--clr-white);
+			outline: none;
+			border: none;
+			position: absolute;
+			right: 5px;
+			top: 5px;
+			height: 4rem;
+			width: 4rem;
+			border-radius: 5px;
+			font-size: 1.5rem;
+			&:hover {
+				background-color: var(--clr-menu);
+			}
+		}
+	}
+}
+
+//Quick Links
+
+.footer-list {
+	display: flex;
+    flex-direction: column;
+    gap: 2rem;
+	li {
+		position: relative;
+		z-index: 1;
+		a {
+			color: var(--clr-white);
+			transition: color .5s ease;
+			display: flex;
+			align-items: center;
+			gap: 1.5rem;
+			i {
+				color: var(--clr-def);
+			}
+		}
+		&:hover {
+			a {
+				color: var(--clr-menu);
+			}
+		}
+	}
+}
+
+//Footer Contact
+
+.recent-product {
+	padding-left: 2rem;
+	ul{
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		li {
+			.rcp {
+				display: flex;
+				align-items: center;
+				gap: 2rem;
+				.rcp-desc {
+					line-height: 1;
+					h6 {
+						text-transform: capitalize;
+						font-weight: 600;
+						color: var(--clr-white);
+					}
+					span {
+						color: var(--clr-def); 
+						line-height: 1;
+						font-weight: 600;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+//Footer Social
+
+.footer-social {
+	display: flex;
+	gap: 1.5rem;
+	li {
+		a {
+			i {
+				height: 4rem;
+				width: 4rem;
+				line-height: 4rem;
+				text-align: center;
+				background-color: var(--clr-def);
+				color: var(--clr-white);
+				border-radius: 50%;
+				transition: background-color .5s ease;
+				&:hover {
+					background-color: var(--clr-menu);
+				}
+			}
+		}
+	}
+}

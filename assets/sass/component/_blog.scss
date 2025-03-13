@@ -1,0 +1,53 @@
+/*-------------------------------------------------------
+18. Blog css 
+---------------------------------------------------------*/
+
+.blog-box {
+	position: relative;
+	z-index: 1;
+	.blog-box-shape {
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		img {
+			width: 100%;
+		}
+	}
+	.blog-desc {
+		padding: 3rem 2rem;
+		box-shadow: 0 10px 30px 0 #ebebeb;
+	}
+	.blog-meta {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		margin-bottom: 2.5rem;
+		li {
+			a {
+				display: flex;
+				align-items: center;
+				gap: 1.5rem;
+				i {
+					color: var(--clr-def);
+				}
+			}
+		}
+	}
+	.blog-content {
+		h4 {
+			text-transform: capitalize;
+			line-height: 3.7rem;
+			margin-bottom: 2rem;
+		}
+		p {
+			line-height: 3.3rem;
+			margin-bottom: 3rem;
+		}
+	}
+}
+
+.blog-box .blog-box-shape {
+    
+}
