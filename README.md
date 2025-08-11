@@ -6,14 +6,12 @@ A collection of solutions, notes, and resources for BCA (Bachelor of Computer Ap
 ---
 
 ## 🛠️ Technologies Used
-This repository contains solutions in multiple programming languages:
-- **C**
-- **C++**
-- **Java**
-- **Python**
-- **HTML, CSS, JavaScript**
+
+- **HTML**
+- **CSS**
+- **JavaScript**
 - **SQL**
-- **PHP** (for web development)
+- **PHP**
 
 ---
 
